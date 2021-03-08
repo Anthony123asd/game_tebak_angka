@@ -30,7 +30,9 @@ class Highscore:
 
     def show(self):
         if self.new : print('Belum ada Highscore')
-        else:print(self.highscore_df)
-
+        else:
+            ranked = self.highscore_df.sort_values(by='high_score', ascending=False)
+            ranked['rank'] = ranked['high_score'].rank(ascending=False).astype('int')
+            print(ranked)
 
 
