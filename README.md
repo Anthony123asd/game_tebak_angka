@@ -5,5 +5,6 @@ Dalam project ini, kami membuat Game console untuk menebak angka random yang dig
 Saya menggunakan code dari teman saya mas Alfian dan mas Mulya pada group TALENT IMAGINE
 
 Untuk menjalankannya silahkan download, dan jalankan pada shell/command line dan masukkan:
-
+```
 python main_Alfian.py
+```
