@@ -1,4 +1,5 @@
 import pandas as pd
+from prettytable import from_csv
 
 class Highscore:
     def __init__(self):
@@ -33,6 +34,8 @@ class Highscore:
         else:
             ranked = self.highscore_df.sort_values(by='high_score', ascending=False)
             ranked['rank'] = ranked['high_score'].rank(ascending=False).astype('int')
-            print(ranked)
-
+            ranked.head(10).to_csv('ranked.csv')
+            with open('ranked.csv') as csv:
+                table = from_csv(csv)
+            print(table)
 
